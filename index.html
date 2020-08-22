@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IBM attrition Prediction</title>
+  </head>
+
+<body>
+ <div class="login">
+	<h1>IBM attrition Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict_attrition')}}"method="post">
+    	<input type="text" name="Age" placeholder="Age" required="required" />
+        <input type="text" name="BusinessTravel" placeholder="BusinessTravel" required="required" />
+        <input type="text" name="DailyRate" placeholder="DailyRate" required="required" />
+        <input type="text" name="Department" placeholder="Department" required="required" />
+        <input type="text" name="DistanceFromHome" placeholder="DistanceFromHome" required="required" />
+        <input type="text" name="Education" placeholder="Education" required="required" />
+        <input type="text" name="EducationField" placeholder="EducationField" required="required" />
+        <input type="text" name="EnvironmentSatisfaction" placeholder="EnvironmentSatisfaction" required="required" />
+        <input type="text" name="Gender" placeholder="Gender" required="required" />
+        <input type="text" name="HourlyRate" placeholder="HourlyRate" required="required" />
+        <input type="text" name="JobInvolvement" placeholder="JobInvolvement" required="required" />
+        <input type="text" name="JobLevel" placeholder="JobLevel" required="required" />
+        <input type="text" name="JobRole" placeholder="JobRole" required="required" />
+        <input type="text" name="JobSatisfaction" placeholder="JobSatisfaction" required="required" />
+        <input type="text" name="MaritalStatus" placeholder="MaritalStatus" required="required" />
+        <input type="text" name="MonthlyIncome" placeholder="MonthlyIncome" required="required" />
+        <input type="text" name="MonthlyRate" placeholder="MonthlyRate" required="required" />
+        <input type="text" name="NumCompaniesWorked" placeholder="NumCompaniesWorked" required="required" />
+        <input type="text" name="OverTime" placeholder="OverTime" required="required" />
+        <input type="text" name="PercentSalaryHike" placeholder="PercentSalaryHike" required="required" />
+        <input type="text" name="PerformanceRating" placeholder="PerformanceRating" required="required" />
+        <input type="text" name="RelationshipSatisfaction" placeholder="RelationshipSatisfaction" required="required" />
+        <input type="text" name="StockOptionLevel" placeholder="StockOptionLevel" required="required" />
+        <input type="text" name="TotalWorkingYears" placeholder="TotalWorkingYears" required="required" />
+        <input type="text" name="TrainingTimesLastYear" placeholder="TrainingTimesLastYear" required="required" />
+        <input type="text" name="WorkLifeBalance" placeholder="WorkLifeBalance" required="required" />
+        <input type="text" name="YearsAtCompany" placeholder="YearsAtCompany" required="required" />
+        <input type="text" name="YearsInCurrentRole" placeholder="YearsInCurrentRole" required="required" />
+        <input type="text" name="YearsSinceLastPromotion" placeholder="YearsSinceLastPromotion" required="required" />
+        <input type="text" name="YearsWithCurrManager" placeholder="YearsWithCurrManager" required="required" />
+
+        
+	
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Monthly Expenses</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
